@@ -10,6 +10,9 @@ def main():
     print(f"{init_tup[0]} passed and {init_tup[1]} failed")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
         screen.fill(000000)
         pygame.display.flip()
     
